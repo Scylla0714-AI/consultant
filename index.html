@@ -33,7 +33,7 @@
   }
 
   /* ── NAV ── */
-  nav {
+  #navbar {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
     padding: 1.4rem 4rem;
@@ -43,7 +43,7 @@
     box-shadow: 0 2px 24px rgba(0,0,0,.04);
     transition: border-color .3s, box-shadow .3s;
   }
-  nav.scrolled {
+  #navbar.scrolled {
     border-bottom-color: var(--rule);
     box-shadow: 0 2px 24px rgba(0,0,0,.06);
   }
@@ -696,7 +696,7 @@
 
   /* ── TABLET (900px) ── */
   @media (max-width: 900px) {
-    nav { padding: 1.2rem 1.6rem; }
+    #navbar { padding: 1.2rem 1.6rem; }
     .nav-links, .nav-cta { display: none; }
     .hamburger { display: flex; }
 
