@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -807,6 +806,110 @@
     transition: color .2s;
   }
   .contact-alt-links a:hover { color: var(--ink); }
+
+  /* ── STORIES ── */
+  .stories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin-bottom: 3rem;
+  }
+  .story-card {
+    background: var(--paper);
+    padding: 2.4rem;
+    display: flex;
+    gap: 1.4rem;
+    transition: background .2s;
+  }
+  .story-card:hover { background: var(--paper-warm); }
+  .story-letter {
+    font-family: var(--serif);
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -.04em;
+    color: var(--accent);
+    opacity: .25;
+    line-height: 1;
+    flex-shrink: 0;
+    width: 2.4rem;
+  }
+  .story-content { flex: 1; }
+  .story-title {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    color: var(--ink);
+    margin-bottom: .6rem;
+    line-height: 1.2;
+  }
+  .story-preview {
+    font-size: .82rem;
+    color: var(--ink-light);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+  .story-toggle {
+    font-family: var(--sans);
+    font-size: .72rem;
+    font-weight: 500;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: color .2s;
+  }
+  .story-toggle:hover { color: var(--accent-dark); }
+  .story-full {
+    margin-top: 1.2rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--rule);
+  }
+  .story-full p {
+    font-size: .88rem;
+    color: var(--ink-light);
+    line-height: 1.85;
+    margin-bottom: .8rem;
+  }
+  .story-full p:last-child { margin-bottom: 0; }
+  .stories-footer {
+    text-align: center;
+    padding-top: 1rem;
+  }
+  .stories-more-text {
+    font-size: .8rem;
+    color: var(--ink-faint);
+    letter-spacing: .08em;
+    margin-bottom: .6rem;
+  }
+  .stories-more-link {
+    font-size: .82rem;
+    font-weight: 500;
+    letter-spacing: .06em;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: .1rem;
+    transition: color .2s, border-color .2s;
+  }
+  .stories-more-link:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+  @media (max-width: 900px) {
+    .stories-grid { grid-template-columns: 1fr; }
+  }
+
+  .nav-links a.active {
+    color: var(--ink);
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 1px;
+  }
 </style>
 </head>
 <body>
@@ -818,6 +921,7 @@
     <li><a href="#services">服務</a></li>
     <li><a href="#about">關於我</a></li>
     <li><a href="#cases">成果</a></li>
+    <li><a href="#stories">故事</a></li>
     <li><a href="#testimonials">見證</a></li>
     <li><a href="#pricing">合作方式</a></li>
   </ul>
@@ -831,6 +935,7 @@
   <a href="#services" class="mobile-nav-link">服務</a>
   <a href="#about" class="mobile-nav-link">關於我</a>
   <a href="#cases" class="mobile-nav-link">成果</a>
+  <a href="#stories" class="mobile-nav-link">故事</a>
   <a href="#testimonials" class="mobile-nav-link">見證</a>
   <a href="#pricing" class="mobile-nav-link">合作方式</a>
 </div>
@@ -936,7 +1041,7 @@
     <div class="service-card">
       <div class="service-num">05</div>
       <div class="service-title">AI 與數位<br>轉型策略</div>
-      <p class="service-desc">身為集團數位策略長，我清楚 AI 轉型卡住的，往往不是技術，而是人和流程還沒準備好。協助企業從業務需求出發，找到真正落地的數位路徑。</p>
+      <p class="service-desc">身為現任集團數位策略長，我清楚 AI 轉型卡住的，往往不是技術，而是人和流程還沒準備好。協助企業從業務需求出發，找到真正落地的數位路徑。</p>
       <div class="service-tags">
         <span class="tag">AI 策略</span>
         <span class="tag">數位轉型</span>
@@ -1028,6 +1133,77 @@
         <span class="case-result-text">策略營，找到真正的問題所在</span>
       </div>
     </div>
+  </div>
+</section>
+
+<hr class="rule" style="margin:0;">
+
+<!-- STORIES -->
+<section id="stories" style="background:var(--paper);">
+  <div class="services-header reveal">
+    <div class="section-tag">創業心裡話</div>
+    <h2 class="section-title">那些沒說出口的<span class="highlight">真實故事</span></h2>
+    <p class="section-sub">26 篇陪伴創業者走過的故事。不是教科書，是我們一起沾了滿身泥巴之後，拼湊出來的答案。</p>
+  </div>
+
+  <div class="stories-grid reveal">
+
+    <div class="story-card">
+      <div class="story-letter">Y</div>
+      <div class="story-content">
+        <div class="story-title">為什麼我得不到肯定？</div>
+        <div class="story-preview">Yvette，那個永遠笑起來很誇張的大姊頭，是我加入 AppWorks 後第一個認識可以喝酒的朋友。2020 年我意外失業，點開了我們從 2015 年開始的對話串⋯⋯</div>
+        <button class="story-toggle" onclick="toggleStory(this)">展開閱讀</button>
+        <div class="story-full" style="display:none;">
+          <p>Yvette，那個永遠笑起來很誇張的大姊頭，是我加入 AppWorks 後第一個認識可以喝酒的朋友，也是一個從頭到尾真心把我當姊姊的好妹妹，在我面前，她不再是大姊頭，反而更像是一個溫馴的小貓，很愛在電話中跟我撒嬌，偶爾露出小爪威嚇我一下，卻在吃飯時，會貼心地幫我叫滿整桌愛吃的菜，及整晚不會空的酒杯。</p>
+          <p>2020.10，我意外的失業了，當時的我一直在尋找老天爺要給我的啟發，不知為何，有一個聲音讓我意外的點進當年我跟 Yvette 的對話，對話串大概從 2015 年開始，那時我剛加入 AppWorks，Yvette 正要去 Sudo，一直到 2018 年。</p>
+          <p>我看著當年 Yvette 問我的，「Sudo 這些人超狂，怎麼管理」「Sudo 要 Pivot」「Sudo 要找人、要擴張」「Sudo 狀況不好，可能要裁員」「不知道怎麼做裁員，怎麼溝通」「接下來的財務結構怎麼規劃，可以幫我想怎麼跟投資人溝通嗎」「我要賺錢把 Sudo 做回來」「我一定可以」⋯⋯我看著一句句的問題，我看著我當年的回答，我的回答從理論上來看沒有什麼問題，但當 2020 我以執行長身份帶領新創團隊八個月後，我看著對話串，我忍不住坐在電腦前大哭了起來，因為我覺得每一個答案都可以更好，不是那種商學院教你的答案，而是當我們都被迫在地上沾了滿身泥巴後，再用手逐漸拼湊起來，更接地氣的答案。</p>
+          <p>所以我做了問卷，問大家對於顧問服務的想法，果然跟我猜測的很像，大部分的回答都是顧問服務很打高空，因為會來做顧問服務的人，其實很少真正在新創團隊和稀泥，摔得滿身傷後，站起來成功的，也就是為什麼顧問的話聽起來都好有道理，但當你回到你的現實環境中時，卻格格不入。</p>
+          <p>這就是我開啟這個女神光粉專的緣起，沒有真正的盈利模式，但我希望透過我自身在大企業與新創團隊的歷練，加上我天生善於聆聽、啟發的能力，期望在每次的對談中，能夠讓創業者知道，其實你不孤單，其實你遇到的狀況，好多人也遇到了，你也許對外必須表現得很強壯，但沒關係，在我面前，你是什麼樣就是什麼樣。</p>
+          <p>她最後的一年半，常常打電話給我，在大家面前總是硬逞堅強的她，在我面前，是非常脆弱的。她反覆問我的問題：「為什麼我得不到肯定？」雖然當時我不斷告訴她，也常常抱著她跟她說：「我覺得你已經很棒了，現在的低潮跟挫折是一時的，我陪著你一起站起來」，不過我給的愛顯然不夠多。</p>
+          <p>我很想她。我也很希望，不管你們用哪種方式，不要去吝嗇你們的溫暖與擁抱，每一個人都有脆弱的時候，給予，然後在未來就不會遺憾。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-letter">X</div>
+      <div class="story-content">
+        <div class="story-title">從微小的事物中找到商機</div>
+        <div class="story-preview">Xavier 有一個很神奇的能力：從很微小的事物當中找到商機。他不會輕易放過任何看起來無用的資源，在他的串連下，資源反而變得很耀眼⋯⋯</div>
+        <button class="story-toggle" onclick="toggleStory(this)">展開閱讀</button>
+        <div class="story-full" style="display:none;">
+          <p>Xavier 是我一開始從事顧問服務，就一直定期跟我有 1:1 的創業者。幾個月的相處以來，我發現看起來溫吞的他有一個很神奇的能力：就是從很微小的事物當中找到商機。</p>
+          <p>我陸陸續續幫他介紹了一些可以合作的團隊，他通常都會從小的合作項目開始跟對方談，因為很小，所以合作的機率就高，經過幾回合的相處之後，慢慢的才迸發出不一樣的火花。我認為這是一個非常難得的創業者特質，因為通常創辦人都喜歡大鳴大放，合作一定要驚動萬教或是很大的資源投入，但 Xavier 可以回到人跟人之間，先溝通磨合，再看雙方緣分，等到天時、地利、人和，再來一個大型合作，這是一個很棒的人格優點。</p>
+          <p>有時他跟對方談合作，最後常常會變成對方將資源轉讓給他，這也是 Xavier 另外一個優秀的特質，他不會輕易放過任何看起來無用的資源，有趣的是，常常在他的串連下，資源在他的團隊反而變得很耀眼。</p>
+          <p>這也是我常常回過頭告訴創業者的一句話：我蠻相信任何的成功都經過 21 次練習，只有從微小的事件開始一件一件累積起，你才能有一天擁有一個點石成金的能力。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-letter">U</div>
+      <div class="story-content">
+        <div class="story-title">人對了，什麼事都對了</div>
+        <div class="story-preview">Una 加入了一家超過 100 人規模的新創，行銷部門加班到深夜，工程師七點準時關燈走人。問題出在哪裡？主管的眼睛，是不是瞎了⋯⋯</div>
+        <button class="story-toggle" onclick="toggleStory(this)">展開閱讀</button>
+        <div class="story-full" style="display:none;">
+          <p>Una 是個很可愛的行銷小妹妹，她這一年加入了一家超過 100 人規模的新創公司，那天在一個活動遇到她，活潑樂觀的她抓著我開始講起她在公司綿綿不絕的行銷活動以及伴隨而來的加班生活，講到最後，她嘟起嘴跟我說：但像公司的工程師跟營運都是晚上七點就全部關燈走人，為什麼會這樣？</p>
+          <p>我安慰她說：這絕對是主管的問題。</p>
+          <p>我曾經在一個不需要上下班打卡的公司，進去後第一週我就發現 A 部門的人大概都 11 點上班，但是通常會處於一個相對放鬆的狀態，下午在茶水間的時間也普遍較長，然後七八點下班。另外一個 B 部門的人也都是 11 點上班，但是觀察他們在會議室的狀態是緊張的，通常到了晚上七八點他們才會回到位置上，開始用電腦處理事情，大概十一點離開公司，有時半夜兩三點，我還會收到這個部門的信。</p>
+          <p>週五，我問了幾個一級主管，你們有觀察到公司同仁上下班的狀況嗎？結果大家的解讀都是一致的，他們都說：部門 B 的人晚上留在公司都是在聊天呀！是他們自己選擇待在公司的。</p>
+          <p>身為基礎員工的你們看到這裡會不會覺得很不可思議，老闆眼睛是瞎了嗎？明明晚上我們待在辦公室是在跟廠商或相關單位確認事情，只是因為加班很苦，所以偶然幫自己製造一些歡樂的情境，結果卻被認為是在公司聊天。</p>
+          <p>其實這種工作狀態的觀察是身為主管很基本的一個能力，有時從夥伴講話的速度或心浮氣躁的程度大概都能感覺到最近的工作狀態，所以茶水間的關懷談話或是走動式管理，其實觀察的情緒都是很細微的。</p>
+          <p>所以我要提醒創辦人及主管們，你的所有感官必須隨時都是張開的，你才能感受到你的夥伴正在經歷的喜怒哀樂。人對了，什麼事都對了。</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="stories-footer reveal">
+    <p class="stories-more-text">還有 23 個故事，在粉專等著你</p>
+    <a href="https://www.facebook.com/ScyllaConsultant" target="_blank" class="stories-more-link">前往女神光粉專閱讀完整故事 →</a>
   </div>
 </section>
 
@@ -1163,7 +1339,7 @@
     <a href="mailto:scylla0714@gmail.com" class="email-cta-block">
       <div class="email-cta-label">直接寫信給我</div>
       <div class="email-cta-address">scylla0714@gmail.com</div>
-  
+      
     </a>
     <div class="contact-alt-links">
       <a href="https://www.facebook.com/ScyllaConsultant" target="_blank">Facebook · 女神光</a>
@@ -1176,7 +1352,7 @@
 <!-- FOOTER -->
 <footer>
   <a class="footer-logo" href="#">女神光<span>.</span></a>
-  <span class="footer-copy">© 2025 女神光顧問 · Scylla Tsai. All rights reserved.</span>
+  <span class="footer-copy">© 2020 女神光顧問 · Scylla Tsai. All rights reserved.</span>
   <nav class="footer-links">
     <a href="https://www.facebook.com/ScyllaConsultant" target="_blank">Facebook</a>
     <a href="https://www.linkedin.com/in/scylla-tsai-68a40487/" target="_blank">LinkedIn</a>
@@ -1185,6 +1361,28 @@
 </footer>
 
 <script>
+
+  // Active nav highlight on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + entry.target.id) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }, {
+    rootMargin: '-40% 0px -55% 0px'
+  });
+
+  sections.forEach(section => sectionObserver.observe(section));
+
   // Hamburger menu
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
@@ -1218,6 +1416,15 @@
     });
   }, { threshold: 0.12 });
   revealEls.forEach(el => observer.observe(el));
+
+  // Story accordion
+  function toggleStory(btn) {
+    const full = btn.nextElementSibling;
+    const isOpen = full.style.display === 'block';
+    full.style.display = isOpen ? 'none' : 'block';
+    btn.textContent = isOpen ? '展開閱讀' : '收起';
+  }
+
 </script>
 
 </body>
