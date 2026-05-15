@@ -37,14 +37,15 @@
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
     padding: 1.4rem 4rem;
-    background: rgba(250,250,248,0.92);
+    background: rgba(250,250,248,0.98);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid var(--rule);
+    box-shadow: 0 2px 24px rgba(0,0,0,.04);
     transition: border-color .3s, box-shadow .3s;
   }
   nav.scrolled {
     border-bottom-color: var(--rule);
-    box-shadow: 0 2px 24px rgba(0,0,0,.04);
+    box-shadow: 0 2px 24px rgba(0,0,0,.06);
   }
   .nav-logo {
     font-family: var(--serif);
@@ -61,7 +62,7 @@
     font-weight: 500;
     letter-spacing: .12em;
     text-transform: uppercase;
-    color: var(--ink-light);
+    color: var(--ink);
     text-decoration: none;
     transition: color .2s;
   }
@@ -1199,11 +1200,343 @@
       </div>
     </div>
 
+
+    <div class="story-card">
+      <div class="story-letter">T</div>
+      <div class="story-content">
+        <div class="story-title">你真正的優勢，不在表面</div>
+        <div class="story-preview">Taylor 有財金背景，做過 PM、公關、業務開發，卻覺得自己的經歷毫無累積。我問他：你喜歡做的事情背後，有沒有一條看不見的線？</div>
+        <button class="story-toggle" onclick="toggleStory(this)">展開閱讀</button>
+        <div class="story-full" style="display:none;">
+          <p>偶然在一個職涯探索的活動中遇見 Taylor，他跟我說他有點迷惘，財金背景的他畢業後，當了三年軟體公司 PM，後來又轉職在公關公司負責大型活動籌備，現在在新創公司擔任新業務開發的工作，在現職做了三年多，最近卻開始越來越迷惘，因為不知道自己究竟擅長什麼，也不知道未來可以做什麼，覺得自己好像經歷都沒有累積。</p>
+<p>很短的時間內，我跟他說，我想要請你做一個練習，把你過去的這幾段經歷，喜歡做的事跟不喜歡做的事都列下來，然後試著去找尋喜歡的事情背後的關聯性。</p>
+<p>Taylor 馬上喃喃自語地講出，他喜歡 PM 工作中可以把大家拼成一個團隊的感覺，但是討厭叫別人做事。接著說，他在公關公司喜歡活動日當天腎上腺素爆發，團隊作戰的感覺，但很討厭提案的過程，喃喃自語一陣子後，他問我，看起來沒有關聯性呀！？</p>
+<p>表現在外的好與不好，通常與你本身擅不擅長有關係，但這個擅長除了後天經驗的培養，在年輕的時候，通常來自於本能，所以去挖掘你真正的本能，這個本能才是造就你每一段歷程中好與不好表現的真正關鍵，順著你的優勢往下延伸，這才是未來世代探索自己職涯的方式。</p>
+<p>探索自己真正的優勢，不是停留在表面的，我擅長行銷或我擅長業務開發，而是類似，我對顧客的感覺很敏銳，所以我總能主動察覺到顧客真正內心的需求，這才是真正的優勢。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-letter">S</div>
+      <div class="story-content">
+        <div class="story-title">你真的懂「專業經理人」嗎？</div>
+        <div class="story-preview">很多創辦人沒有在大企業工作過，連第一步「辨別專業經理人的能力」都還需要學習。不要再怪專業經理人不好用，先問問自己有沒有做好功課。</div>
+        <button class="story-toggle" onclick="toggleStory(this)">展開閱讀</button>
+        <div class="story-full" style="display:none;">
+          <p>坊間有太多談論什麼是專業經理人，或者專業經理人該如何自處的文章，但我發現很多創辦人沒有在大企業工作過，所以連第一步：辨別專業經理人的能力都需要學習。</p>
+<p>首先，認識專業經理人的位階。大公司不像新創團隊，基礎同仁的職稱是管理師，接下來是資深管理師、高級管理師、主任、副理、經理，每一個職級都必須經過 1.5-2 年才能獲得晉升，所以不同企業的經理代表的經歷跟輩份都不同。</p>
+<p>再來，你必須清楚這個專業經理人是在什麼樣的階段進入這家企業的，是在生存期、擴張期、成熟期還是轉型期？在成熟期階段的專業經理人通常分工明確，但相對來說就缺乏彈性，也比較難以適應有點混亂的新創團隊。</p>
+<p>所以不要再怪專業經理人不好用，而是你有沒有真的知道專業經理人是怎麼被培養長大的，以及他擅長的項目是什麼？同時，專業經理人不是一切的解方，你們兩個應該要在同一艘船上一起討論出方向。確實去了解專業經理人過去管理的幅度、專業能力及建立的成就（以及他在其中扮演的角色），你才能真正的知人善任。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-letter">R</div>
+      <div class="story-content">
+        <div class="story-title">一定要 OKR 嗎？</div>
+        <div class="story-preview">Rita 的公司規模已破百人，坐下來第一句話卻是：「一定要 OKR 嗎？」工具就只是工具，管理永遠都在日常日復一日的細節中。</div>
+        <button class="story-toggle" onclick="toggleStory(this)">展開閱讀</button>
+        <div class="story-full" style="display:none;">
+          <p>Rita 是一個很聰明幹練又有經驗的創辦人，她高中畢業就在美國求學並在矽谷新創公司工作了近十年才回到台灣創業，目前公司規模也破百人了，正在快速成長的階段，結果，她一坐下來問的題目居然是：「一定要 OKR 嗎？」惹得我大笑。</p>
+<p>她公司的組成，扣掉核心決策人員及後勤，其實有近一半的人都是做單一工作，接近是按件計酬的人員，而且每日件數及品質都可以確認。她說：「好像不 OKR 就是不新創，但明明這樣的人員用 KPI 就好了呀！」</p>
+<p>我真的覺得很奇怪，KPI 的設計本來就是用以驗證期末是否有達到目標，但過程中，主管本來就必須要不斷的跟員工確認是否過程中有障礙，甚至平常的 1:1 本來就要互相分享期待，並作溝通，怎麼會覺得 KPI 的表格或機制要盡善盡美做到所有主管本來就該做的事呢？</p>
+<p>工具就只是工具，但管理的基本概念與思維是不會變的。關鍵在領導人，你是為了工具而工具，還是真的想把公司管好？不管是 KPI、MBO、OKR 都只是其中一種工具，管理永遠都在日常日復一日的細節中。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-letter">Q</div>
+      <div class="story-content">
+        <div class="story-title">創業很孤獨？</div>
+        <div class="story-preview">Quincy 嘆了一口氣說：創業真的很孤獨。但我想問的是，孤獨是必要的嗎？思考不等於孤獨，領導人就是要領導大家走出新局。</div>
+        <button class="story-toggle" onclick="toggleStory(this)">展開閱讀</button>
+        <div class="story-full" style="display:none;">
+          <p>Quincy 後仰靠在辦公椅上，嘆了一口氣說：創業真的很孤獨。我看著不大的辦公室，Quincy 的位置在最角落，open floor 是新創團隊最愛的開放空間，但開放的似乎也只有空間。</p>
+<p>我很少有孤獨這種感覺，即使我在 3000 人以上的大企業，身處決策核心，我也很少有這種感覺。我的 team members 幾乎都是我的臉書朋友，所以這個孤獨是必要的嗎？</p>
+<p>的確，不管是創辦人或專業經理人都必須要有沈思的時間，但沈思是為了沈澱自己的想法、優化自己的做法，將策略與未來思考的更清楚，但這，不是孤獨。因為通常我想完這些事情後，我會把時間軸拉出來，所以我就會有必須要開始慢慢跟某些受影響的人分階段溝通的 to-do list。</p>
+<p>我認為不該有不能說的事，只有時間恰不恰當的問題。所有的決策都必須考慮得很清晰，要有脈絡，要有邏輯，要有中心思想，藍圖必須面面俱到，照顧每一個人，顧好每一個細節。思考，你就不會有時間孤獨，因為孤獨是沒有用的，領導人就是要領導大家走出新局，而且自始至終，言而有信，表裡如一。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-letter">P</div>
+      <div class="story-content">
+        <div class="story-title">每個人都可以是自己的創業版本</div>
+        <div class="story-preview">Phoebe 在新創待了好幾年，薪資不高，職銜空洞，年近 30，上不上下不下。她問我：我還要繼續待嗎？</div>
+        <button class="story-toggle" onclick="toggleStory(this)">展開閱讀</button>
+        <div class="story-full" style="display:none;">
+          <p>Phoebe 是我認識多年的妹妹，她也是一家創業公司的初始員工之一。我們大概一年見一次面，她每次的不滿及疑惑都越來越強烈，因為公司的規模大概都維持在差不多的狀況，損益也就是都在零上下飄動。</p>
+<p>她越來越質疑，自己到底還能幫忙公司什麼，或者是說，公司到底會走到哪裡去，而最實際的是，她拿著不算高的薪資，卻空有一個新創團隊 XX 長的職銜。自己的年紀也即將 30，有一種上不上下不下的感覺，每次想要離開時，公司都會剛好有人員異動，負責任的她，總是因為不捨又繼續留下來。</p>
+<p>其實，我每年對她講的都一樣：你要想成你不會永遠都在這家公司，所以關鍵是，你本身的專業跟技能是否能讓你待在每家公司，甚至自身就可以創造出影響力？你要有那個能力，幫助每個地方、每個夥伴發光發熱，而不是讓環境綁架了你。</p>
+<p>每個人都可以是自己的創業版本，只有你自己知道是不是已經更新到最新版，以及平台是否有配合上你的更新，還是你們是不相容的。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-letter">N</div>
+      <div class="story-content">
+        <div class="story-title">留在原地，都不是好選擇</div>
+        <div class="story-preview">Norton 幫團隊建立了對外交流的橋樑，沒想到夥伴們回來後開始抱怨公司沒有完整制度。他問我：當初這樣做，是不是反而錯了？</div>
+        <button class="story-toggle" onclick="toggleStory(this)">展開閱讀</button>
+        <div class="story-full" style="display:none;">
+          <p>Norton 是我認識多年的創辦人，一畢業就開始創業，他說：這一年開始感受到夥伴對於外界的陌生與隔閡，前一陣子他主動幫行銷建立了橋樑，讓他們去跟別的新創公司互相交流，但夥伴們回來後分享的卻是別的公司都有完整的教育訓練，為什麼我們公司沒有？他問我：當初這樣把同仁推出去，是不是反而錯了？</p>
+<p>我分享了一個在衣索比亞部落遇到的故事。Konso 部落的酋長曾在首都唸完大學、在建築師事務所工作三年，卻選擇回到部落。他說：摩登建築屬於城市，最適合部落的房子還是傳統的建築。但他同時也有計畫地讓族人接受教育。我們問他：難道你不擔心族人接受教育後就不再回來了嗎？他說：如果族人最後不回來部落，那至少，這是他選擇過後的結果。</p>
+<p>一個領導者要有雅量接受夥伴們都有追求心中更好的權利，同時你也有義務讓你的團隊變得更好。更有趣的是，夥伴的成長也不一定會變成「小廟容不了大神」的結論，當你有一個大神，賦能就是你該做的事，而不是把門關上。因為這個世界的資訊與競爭是無所不在的，唯有徹底經過洗禮並從中獲得成長的人，才是真的有選擇的人。而可以肯定的是，留在原地都不是一個好選擇。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-letter">M</div>
+      <div class="story-content">
+        <div class="story-title">真正的信任，不是掛在嘴上的</div>
+        <div class="story-preview">Myra 十個人的團隊，她事必躬親，連自己的生活都沒有了。她問：到底什麼情況下可以授權？創業團隊中的授權其實就是信任。</div>
+        <button class="story-toggle" onclick="toggleStory(this)">展開閱讀</button>
+        <div class="story-full" style="display:none;">
+          <p>Myra 來找我的時候，一副就是已經累壞的樣子，十個人的團隊，她事必躬親，每件事情她都會參與決策，並為事情的結果負責任。這本來是很棒的特質，但 Myra 已經被折騰到連自己的生活都沒有了。</p>
+<p>我建議她，從現在開始，在進行每一個決策時，都可以加上討論與溝通。因為唯有核心團隊都理解公司的核心理念，唯有透過每一次案例的溝通，團隊成員才能越來越理解每個決策背後真正的核心價值與判斷點，才能真正解決授權的問題。</p>
+<p>我前陣子就遇到一個很棒的團隊，創辦人說他只管產品的品質與理念，其他出貨、結帳或客戶服務，他都會放手讓專責的夥伴全權負責，失誤了也沒關係，大家一起學習，一起成長，但他都會隨時在旁邊補位，讓團隊安心。</p>
+<p>我常說在創業團隊中的授權其實就是信任。創辦人不願意授權的真正原因是內心的魔鬼，就是不信任，而不信任的原因常常來自於雙方並沒有花時間去溝通、去理解對方。真正的信任不是掛在嘴上的「我相信你」，而是完整包容，共同承擔。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-letter">L</div>
+      <div class="story-content">
+        <div class="story-title">善待周遭的人</div>
+        <div class="story-preview">Lance 已經 60 歲，是台灣一間頗有名氣的中小企業老闆，年營收近百億。但在旅途中，我看見的是另一個故事。</div>
+        <button class="story-toggle" onclick="toggleStory(this)">展開閱讀</button>
+        <div class="story-full" style="display:none;">
+          <p>我在一趟旅行中遇見 Lance 和他的妻子，Lance 已經 60 歲，是台灣一間頗有名氣的中小企業老闆，年營收應該近百億。聽得出來，Lance 年輕時應該很有衝勁，霸氣十足，勇敢帶著團隊往前衝，才能有今天的事業。</p>
+<p>不過，從旅程之初，Lance 就酒不離身。旅程到了第三天晚上，Lance 就發作了，在眾人面前狂罵老婆，而老婆只是默默低著頭坐在旁邊。隔天一早，Lance 又恢復彬彬有禮，一桌一桌跟我們道歉說：他有嚴重的躁鬱症，沒控制好，所以造成大家的困擾。</p>
+<p>他也不屑地對著我說：你們這種行銷人，都是靠包裝，把死的說成活的，像我們這種硬實力的，不用靠花言巧語，一樣把產品賣到全世界。</p>
+<p>但我卻在他身上彷彿看到許多人未來可能的樣子，這是一種太早成功的狂妄與失落，種種壓力長年導致他的精神潰堤。我常跟創業者說：要珍惜現在，要工作與生活平衡。為什麼說少年得志大不幸，關鍵不在少年得志，而是在得志時，你是否有正確的心態去看待你的得志。永遠要善待周遭的人。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-letter">K</div>
+      <div class="story-content">
+        <div class="story-title">慢慢快</div>
+        <div class="story-preview">Kelly 每個月都來找我聊，筆記本密密麻麻，清單很長。但我問她一個問題，她卻答不出來。忙碌不等於成長。</div>
+        <button class="story-toggle" onclick="toggleStory(this)">展開閱讀</button>
+        <div class="story-full" style="display:none;">
+          <p>Kelly 定期都會找我聊聊天，據她的說法，她想藉由這個過程知道每個月的自己是否有更好。這是我們的第三次定期聊天，她拿出筆記本，開始告訴我她這個月讀了哪幾本書，在公司處理了幾件火燒屁股的事情，每天在公司一個會議接著一個會議，還有跟幾個夥伴的 1:1，密密麻麻的，她如流水帳的報告她完成的清單。</p>
+<p>我隨口問了一句：如果要你說出《開拓者》這本書裡，你最佩服 Marc 的一件事情，你會說什麼？Kelly 不像之前的口若懸河，開始卡卡的自言自語說：Marc 就是 Salesforce 那個，恩，但是，我有點想不出來。</p>
+<p>我對 Kelly 說：如果你是我的員工，我就會跟你說你太追求結果導向，而沒有真的體會這一路上的風景，與這一路上的災難要告訴我們的事情。我寧可你沒有看這麼多本書，可是每一本書能劃下幾個重點或寫成讀書心得，這才會真正變成你的內涵。</p>
+<p>有些人需要靠著忙來確認自己的真實存在，但累積一段時間後，仍然會覺得茫然。我很喜歡我在花蓮原住民部落中，他們教我的一句話：「慢慢快」，慢慢的把每一件事情確實做好，之後就會快了；相反的是，如果每一件事情都求快，結果反而常常會變成徒勞無功要重來，那就變成「快快慢」。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-letter">J</div>
+      <div class="story-content">
+        <div class="story-title">商業模式驗證前，能變動就變動</div>
+        <div class="story-preview">Jack 興致勃勃地來找我討論募資架構，還沒開始前，我就忍不住打斷他了。在商業模式還沒取得市場驗證前，所有服務都可能隨時調整。</div>
+        <button class="story-toggle" onclick="toggleStory(this)">展開閱讀</button>
+        <div class="story-full" style="display:none;">
+          <p>Jack 最近想延伸自己的本業，成立一個垂直型品牌電商，他興致勃勃地跑來找我討論募資的架構，還沒開始前，我就忍不住打斷他了。</p>
+<p>我問他：你會 Full Time 投入嗎？他說不會，打算先雇用三個小朋友幫忙上架及出貨。我問他：你們有人熟悉電商操作嗎？他說他自己都沒有碰過，但想說找人架個站，不就開始了。</p>
+<p>我跟他說：Jack，我們都學過變動費用跟固定費用的道理，那怎麼在這件事情上你就忘記了呢？在商業模式還沒有確定取得市場驗證前，所有的服務都可能隨時調整，在這樣的情況下，我真的誠懇地建議你：先使用 SaaS 模式的電商服務，雖然收取分潤很心疼，但換來的卻是你可以一直嘗試不同的金流、不同的物流，以及隨時監看數據，等到確定是個 sustainable business，再來想自己要架網站也不遲。</p>
+<p>再延伸這個道理，辦公室用品初期能用租賃的都盡量用月租模式，將團隊心力放在商品及服務本身。能用變動費用處理的項目，就別急著固定下來。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-letter">I</div>
+      <div class="story-content">
+        <div class="story-title">妳的心與腦在想什麼？</div>
+        <div class="story-preview">Ida 的公司一年內從 75 人擴增到 150 人，她的主管離開了，同伴在旁邊坐收漁翁之利，已經超過半年。但真正的問題，不在外面。</div>
+        <button class="story-toggle" onclick="toggleStory(this)">展開閱讀</button>
+        <div class="story-full" style="display:none;">
+          <p>Ida 某次聽完我的演講後，就非常積極想約我聊聊她現在遇到的困擾。她目前工作的新創團隊非常的如日中天，人數在一年之內擴增了一倍到近 150 人的規模，她是一畢業就在這個團隊中。最近帶著他們的經理離開了，變成他們要直接對創辦人，同時他們兩個人也分別開始要各自組團隊。</p>
+<p>她的另外一個同伴，採取了一個很聰明但很賤的方式，就是 Ida 做什麼他就模仿什麼，所以犯錯都是 Ida 的判斷力不足，做對了則是應該的。這樣的情況居然已經超過半年了，Ida 最近開始覺得工作很沒有熱情，也很茫然。</p>
+<p>我最後其實只跟 Ida 說：我可以給妳一個很積極的方法，就是不管怎麼樣，妳就是都先把創辦人的時間約下來。但是妳這麼聰明，早就應該會用這個方法了，所以妳沒有這麼做的原因，妳可能需要回去想清楚，妳的心與腦在想什麼？妳真正不滿足的到底是什麼？是沒有機會獲得主管的位置？還是覺得不受重視？這個內心的訊號，妳得自己想清楚。</p>
+<p>同時，我要提醒所有創辦人或主管：不要讓自己成為組織的 bottleneck，不應該有事情卡在你的時間而無法做決定。當夥伴需要找你時，你也應該永遠能即時解決夥伴的問題，才能讓大家順利地再往前。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-letter">H</div>
+      <div class="story-content">
+        <div class="story-title">為什麼我一直覺得他們在逼我？</div>
+        <div class="story-preview">Henry 在董事會前一晚敲我說：救命！我明天想跟董事說我不幹了！我說：這不是跟我在大公司當行銷長一模一樣的狀況嗎？</div>
+        <button class="story-toggle" onclick="toggleStory(this)">展開閱讀</button>
+        <div class="story-full" style="display:none;">
+          <p>Henry 那天超搞笑的一直敲我的 messenger，說：救命！我明天要開董事會，我想要跟董事說我不幹了！</p>
+<p>Henry 的公司幾年前有一個集團入資，只是當時失策的地方是：Henry 的股份被稀釋到不到 50%。到了 Covid-19，市場波動太大，上半年每個月的營業額像坐雲霄飛車，獲利也首度探底。Henry 崩潰的說：「我已經依照他們的指示，裁到只剩三個員工，也退租辦公室了，沒想到他們跟我說，連行銷費用都要縮減，行銷費用一旦縮減，那肯定營收更會直直落，我還不如現在就不要幹了！」</p>
+<p>我突然大笑的跟 Henry 說：這不是跟我在大公司當行銷長是一模一樣的狀況嗎？上市櫃公司的財務長因為每個月都必須公布財報，行銷費用的縮減幾乎都是第一時間會被要求的。但我通常會回頭跟財務長討論：如果你縮減成 A 費用，我能做到的營收可能也會隨之下滑到 B，但如果留一些空間給我，我保證一定做超過 B 營收。</p>
+<p>Henry 聽完後也跟著笑出來說：對耶！為什麼我會一直覺得他們就是壓榨我、來逼我的，為什麼都沒辦法想成我們要共同討論出一個對公司最好的方式呢！</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-letter">G</div>
+      <div class="story-content">
+        <div class="story-title">我是不是太急了？</div>
+        <div class="story-preview">Gemma 在兩家新創都遇到同樣的問題：她想從系統面跟創辦人討論改變，但創辦人永遠有更緊急的事。三年過去了，她問我：多久才夠？</div>
+        <button class="story-toggle" onclick="toggleStory(this)">展開閱讀</button>
+        <div class="story-full" style="display:none;">
+          <p>Gemma 一直是個陽光美少女，但最近一次她找我吃飯時，我被她的落寞嚇到了。她前後加入了兩家市場聲量都不錯的新創團隊，因為她不計較又使命必達，所以都在很短的期間內幫團隊解決了很多現場問題，也開始帶著團隊成員一起解決問題。</p>
+<p>但很快地就遇到瓶頸了。她想從組織的系統面跟創辦人討論怎麼做出改變，但遇到的狀況都一樣，創辦人們不能體會這件事的重要性，因為創辦人的腦袋中永遠都有更多生存性的問題要想。時間拖久了，現場人員似乎在一個手工業的無止境循環中，沒有成長。</p>
+<p>Gemma 懷著疑問問我：她是不是太急了，應該多給創辦人一些時間？但如果三年不夠，那多久才夠呢？</p>
+<p>在 Gemma 的案例中，創辦人跟 Gemma 並沒有很真心地討論這件事的重要程度。有些創辦人常常會用「我知道，但是⋯⋯」來當作這種討論的答案，所以你沒有說好也沒有說不好，但事實上，你真的就是沒有放在心上。新創團隊的員工完全能理解公司資源有限，一個有品質的一小時溝通，絕對勝過 100 次的「我知道，但是⋯⋯」</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-letter">E</div>
+      <div class="story-content">
+        <div class="story-title">Team Building 解決不了的問題</div>
+        <div class="story-preview">Eileen 問我可不可以幫忙做 Team Building？我先問她：你真正想解決的問題是什麼？這大概是我這一年顧問服務最深的感觸。</div>
+        <button class="story-toggle" onclick="toggleStory(this)">展開閱讀</button>
+        <div class="story-full" style="display:none;">
+          <p>Eileen 問我可不可以幫忙做 Team Building？我問 Eileen，你以前有上過這樣的課程嗎？我的感覺是「好假，好像只是陪老闆消耗預算，但如果可以順便玩樂一下，還蠻好的」。</p>
+<p>我問 Eileen，所以你真的想解決的問題是什麼？（這大概是我這一年顧問服務最深的感觸——大家不太容易把真正的問題問對，所以 garbage in, garbage out，問題沒問對，就不會有好的解決方案。）</p>
+<p>狀況大概是：團隊內有的人可以很當責，以團隊為優先把事情做好，但也有些人只是把交代的事情做完，有些人隨著加入的時間變長，漸漸變得沒有熱情。</p>
+<p>我建議 Eileen 應該每個月很有紀律地跟團隊內每一個人進行 1:1，重點應該擺放在對彼此說出期待：我對你在工作上及心態上的期待是什麼？同時你也告訴我，你期待我可以幫你什麼。</p>
+<p>一定要把最珍貴的時間花在你的明星員工，而不是問題員工。大部分人卻都把時間花在不斷惹麻煩的問題員工，久而久之，可能有兩個結果：明星員工救全公司，不然就是全部人都一起變得平庸、沒有鬥志。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-letter">D</div>
+      <div class="story-content">
+        <div class="story-title">只要抓住自己的核心競爭力</div>
+        <div class="story-preview">Darren 離開了自己創辦的公司，沉寂幾個月後，決定再次出發。他默默跟我說：其實，只是覺得虧欠夥伴，他們值得更好的。</div>
+        <button class="story-toggle" onclick="toggleStory(this)">展開閱讀</button>
+        <div class="story-full" style="display:none;">
+          <p>Darren 是我認識多年的朋友，遠在我認識新創之前，他是我身邊唯一一個連續創業家，而且本身技術能力很強，題目也非常有獨特性。年初聽到他離開自己創辦的公司，我非常詫異，後來才知道他跟共同創辦人這幾年有方向上的分歧。</p>
+<p>Darren 想要穩紮穩打，有多少人就做多少案子，但共同創辦人認為他們正在風口上，想要快速擴張市場。共同創辦人同時也掌握了財務，因此在沒有良好的溝通機制下，公司從小有盈餘，到虧損，到必須再跟投資人募資才能渡過難關。經過溝通，共同創辦人依然想走快速擴張路線，因此 Darren 決定認賠裸出，離開自己創辦的公司。</p>
+<p>經過幾個月的沈寂，他決定再次募資，成立公司，只是這一次，只有他一位創辦人，同時幾位原來公司的夥伴也加入了這間公司。</p>
+<p>幾天前，遇到 Darren，他默默跟我說：其實，只是覺得虧欠夥伴，他們值得更好的，我也有那個責任把過去虧欠他們的，加倍還給他們，直到償清了，才覺得毫無遺憾。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-letter">C</div>
+      <div class="story-content">
+        <div class="story-title">當初的選擇，是誰的責任？</div>
+        <div class="story-preview">Claire 待過 4 個新創公司，都因為組織問題無疾而終。她最新加入的公司有 200 人，聽起來靠譜——直到我看見她滿臉愁容。</div>
+        <button class="story-toggle" onclick="toggleStory(this)">展開閱讀</button>
+        <div class="story-full" style="display:none;">
+          <p>Claire 是我認識多年的妹妹，從她剛畢業來我工作的地方求職，我們就有緣份地成為好朋友。這些年，她待過 4 個新創公司，但都因為內部人員或組織的問題，沒有辦法真的延續她的職涯與經驗。</p>
+<p>去年，她加入了一個約 200 人的新創公司，主事者有經驗，初步聽起來蠻靠譜的。前陣子找她吃飯時，她滿臉愁容。公司分成四層，她是基層員工，上面有小主管，再上去是大主管，然後是 CEO。小主管沒有經驗，所有事情都習慣自己硬來，也不帶人一起去開會或共享資訊。大主管忙著應付執行長需求，又要爭取團隊信任，與小主管的時間反而非常少。執行長則疲於奔命，應付投資人還有媒體。</p>
+<p>聽完後，我說這其實是普遍團隊在快速擴張中都會面臨的問題，但如果不在 30-50 個人的規模時就先打好根基，一旦組織擴張到 4-5 倍大時，所有當初沒蓋好的基礎，都會在這個時刻格外怵目驚心。</p>
+<p>我聽過一句最可怕的話，是一位新創團隊的員工在多年後跟創辦人抱怨，結果創辦人卻跟他說：這是你的選擇，我也給了你充份自由，你應該要找到屬於自己的位置。聽來傷心，卻也不是個案。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-letter">B</div>
+      <div class="story-content">
+        <div class="story-title">人近中年，找出核心競爭力</div>
+        <div class="story-preview">Barry 在大企業工作將近十年，接近 40 歲，開始思考：還能繼續走這條路嗎？斜槓，也必須順著自己的核心競爭力走，才容易事半功倍。</div>
+        <button class="story-toggle" onclick="toggleStory(this)">展開閱讀</button>
+        <div class="story-full" style="display:none;">
+          <p>Barry 是我之前在大企業工作時的後輩，一個機緣下最近就約了起來，談起他這將近十年在大企業的工作職掌，人接近 40 歲，難免會開始思考還能繼續走這條路嗎？如果不走這條路，現在應該做什麼準備？</p>
+<p>我談起了我整個工作職涯的歷程，在大企業的那些年無疑地奠基了我所有的基礎，在大企業，升遷慢，但同時也讓我的功夫非常有底氣。後來我仔細思考了我的職涯脈絡，我歸納出我的優勢其實是很會應用數據分析及消費者心理學打造市場需要的產品與場景。</p>
+<p>如果是這樣的脈絡累積，再加上過去的成績單，在面對未來越瞬息萬變的世界，隨時有產業沒落，有全新聽不懂名詞的新產業崛起，只要抓住自己的核心競爭力，就比較不會害怕被世界淘汰。</p>
+<p>所以我鼓勵 Barry 也可以去思考過去做什麼事情時最得心應手，為什麼？是自己發揮了什麼特別的技巧？還是與生俱來的天賦？人近中年，剛好是時候去整理、分析自己過去的歷史，好幫自己的未來把脈。斜槓，也必須是順著自己的核心競爭力走才容易事半功倍。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-letter">A</div>
+      <div class="story-content">
+        <div class="story-title">把愧疚變成更大的動能</div>
+        <div class="story-preview">Ada 從北京回台灣創業，做節能環保。Covid-19 讓她不得不裁員 20 人。發薪那天，她女兒問：媽媽，我們可以去吃漢堡嗎？</div>
+        <button class="story-toggle" onclick="toggleStory(this)">展開閱讀</button>
+        <div class="story-full" style="display:none;">
+          <p>Ada 是我完全不認識的創業者，她透過我的北極熊文章找到我，她說：很多人都會寫愛地球，但她從我的文字中感覺到我是一個實踐者。Ada 台灣大學畢業後就在大陸的時尚圈、媒體圈及投資圈工作，直到幾年前被北京一年比一年誇張的環境污染驚嚇到，於是帶著老公及小孩回到台灣創業，創業題目是透過簡單的工具及溝通，讓人人都可以有節能意識。</p>
+<p>她講了一個我印象很深刻的故事：她曾經帶著國內外的投資人到山西看一個礦場投資案，但所有投資人眼裡看到的都是投資報酬率，卻沒有人看到這個村莊的男性平均壽命是 47 歲，以及終年看不到藍天。</p>
+<p>今年上半年遇到 Covid-19，許多原來預計使用她們節能商品的公司喊停，她實在支撐不下去，於是做了裁員 20 個人的決定。面談的那天，她的小女兒在旁邊說：媽媽！今天發薪水，我們可以去吃漢堡嗎？Ada 說：不行喔！薪水要先發給跟我們一起打拼的員工，所以這個月，妹妹可以跟我們一起節省嗎？</p>
+<p>我先告訴 Ada：要把愧疚變成更大的動能，要牢牢記住這個感覺，身為領導者，你必須要有能力開創新局，也必須預先意識到危機，並提前做出因應方案。Ada 的眼淚在咖啡店的燈光下格外讓我心疼，我抱抱她，說：別擔心，以後我在你身邊。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-letter">F</div>
+      <div class="story-content">
+        <div class="story-title">深謀遠慮，但別忘了戒慎恐懼</div>
+        <div class="story-preview">Fitzgerald 的宅經濟事業在疫情中逆勢成長 30%，但他心中卻很憂慮。人無遠慮，必有近憂，是身為掌舵手必須要有的基本觀念。</div>
+        <button class="story-toggle" onclick="toggleStory(this)">展開閱讀</button>
+        <div class="story-full" style="display:none;">
+          <p>Fitzgerald 做的是跟宅經濟相關的服務，所以在疫情中，算是很幸運地不僅營收成長 30%，獲利也跟著提升，也因為業務量的增加，又新召聘了幾位員工。但他其實心中很憂慮，他跟我說：他不知道能因為疫情持續這個榮景多久，更擔憂如果狀況不再這麼好了，就很難養起這麼大的團隊。</p>
+<p>我其實很開心 Fitzgerald 有這個擔憂，人無遠慮，必有近憂，是身為掌舵手必須要有的基本觀念。我提醒他兩件事：</p>
+<p>第一，每次的招聘，執行長都必須為這個人選負一輩子的責任，必須假設這個人選在沒有意外的狀況下會在你的公司一輩子。千萬不要認為你只是找人來填補空檔，若只是短期的業績爆發，建議直接找派遣人員即可；如果是長期的業績滾動，則必須找合適的專業人才。</p>
+<p>第二，所有報導大概都偏向疫情會在某個時間點緩解，所以倒推六個月的新服務開發期，你差不多現在就得準備另外一個能創造新業績的服務了。每年至少得抓 5-10% 的獲利成長才能說是跟去年持平。</p>
+<p>在「深謀遠慮」的同時，須時時提醒自己不能過於自負，反而要戒慎恐懼，隨時具有危機感。當然，具危機感並不代表要保守、退卻，而是要具有企圖心。在積極但審慎的心態下，就能達到犯最少的錯誤，累積最大成就的境界。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-letter">O</div>
+      <div class="story-content">
+        <div class="story-title">新人的第一天，你準備好了嗎？</div>
+        <div class="story-preview">好不容易找到適合的工作夥伴，我有時都忍不住想掐創業團隊的脖子——那麼你們怎麼可以這麼輕忽 onboarding process 呢？</div>
+        <button class="story-toggle" onclick="toggleStory(this)">展開閱讀</button>
+        <div class="story-full" style="display:none;">
+          <p>好不容易找到適合的工作夥伴，我有時都忍不住想掐創業團隊的脖子——那麼你們怎麼可以這麼輕忽 onboarding process 呢？</p>
+<p>不管是在新創團隊還是大公司，我對於新人 onboarding 的指導原則都是：情感上，讓新人覺得像回到家一般自在；專業上，必須讓新人有明確的 guideline，知道即將會發生什麼事，以及他該預做哪些準備。</p>
+<p>報到前一週，我會建議當責主管或 Mentor 給予新人報到後至少兩週內的行程及要參與的會議，甚至小到何時需做新人介紹、什麼樣的篇幅及角度，都能讓新人先有心理準備。報到當天，桌上一定要有老大親手寫的歡迎卡片及印製好的名片，所有必備的工作工具都必須乾淨完整而且是安裝好的。</p>
+<p>Mentor 的人選，我個人偏好指定最後一個報到的夥伴來擔任，主要是因為他剛脫離新人階段，能最感同身受新人可能遇到的困境。而最忌諱的，當然就是請即將要離職的同仁來做 Mentor——即將離職的人帶來的負能量是很有感染力的，你不會希望新人在對公司還沒有一定了解前，就先被烏煙瘴氣給搞昏了。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-letter">V</div>
+      <div class="story-content">
+        <div class="story-title">公私不分，是最快讓人心寒的事</div>
+        <div class="story-preview">Vito 離開了創業五年的團隊。他發現供應商竟然就是共同創辦人自己開的公司。這種公私帳不分的事情，在新創團隊其實蠻常見的。</div>
+        <button class="story-toggle" onclick="toggleStory(this)">展開閱讀</button>
+        <div class="story-full" style="display:none;">
+          <p>Vito 前陣子離開了創業五年的團隊，聽著他娓娓道來，其實不算正常，但也不算罕見。Vito 跟他的共同創辦人是透過創業圈介紹認識的，當初會湊在一起是因為剛好專業互補。CEO 主要負責外面的事務，Vito 則是營運長，負責公司內的營運，在沒有特別有紀律的邀約會議情況下，兩三個月雙方都沒有對談，是很平常的事。</p>
+<p>有一天，CEO 說應該開始開展周邊商品的電商銷售，Vito 覺得可以試試看。時間流逝，電商銷售業績始終不見起色，Vito 這才發現自家商品的價格與成本就是比別人貴上許多。仔細盤了供應商，才發現供應商根本就是 CEO 自己開的公司。</p>
+<p>後面當然就是鬧到了董事，但最後 Vito 還是決定離開。我也不知道為什麼公私帳不分的事情還蠻常見的，不管在大公司還是新創，拿公司資金去投資創辦人個人在外面開的公司、用公司統編報私帳美其名節稅，這都是有問題的公司治理。</p>
+<p>這個案例除了公私不分的問題，核心成員的互動溝通也是很嚴重的問題。這就是為什麼我不管身在哪個環境，訂下 Regular meeting 的時間都是我很重視的，定期溝通能讓我們定期校準期待與本分。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-letter">W</div>
+      <div class="story-content">
+        <div class="story-title">留 30% 勇敢去冒險</div>
+        <div class="story-preview">Wendy 很努力、很有紀律，週末排了滿滿的進修課程。她問我：新的一年如何幫自己設定目標？我說：你有沒有幫自己規劃不一樣的冒險？</div>
+        <button class="story-toggle" onclick="toggleStory(this)">展開閱讀</button>
+        <div class="story-full" style="display:none;">
+          <p>Wendy 問起新的一年如何幫自己設定目標，同時怎麼提升自己的能力？但我認識的 Wendy 其實平常就很努力，也很有紀律，像是有資訊恐慌症一般地幫自己的週末排了滿滿進修課程，我推薦的書，也幾乎本本沒有錯過，在我看來，Wendy 已經是很棒了！</p>
+<p>我跟她說：我其實很討厭聽人家說，去想想三年後或十年後的自己，再倒推回來幫自己設定逐年的目標。現在就可以看見的未來都是線性的，一個線性成長的人生，只要按部就班，等待時間點到來就會發生。身處變化萬千的世界，我們也都必須隨時準備好變身成現在常說的第二曲線。</p>
+<p>所以我問 Wendy：除了日常的進修之外，你有沒有幫自己規劃不一樣的冒險？像是參加自己從來沒接觸過的團體，或是去學習一些跟自己或本業完全不相關的技能？</p>
+<p>Wendy 問我說：那不就太分散了？我說：可是難保，機會就出現在這些平常你完全不留心的地方。人生很長，你可能必須維持你的競爭優勢到 50 歲、60 歲、70 歲，所以除了把精力花在線性未來，建議也留 30% 勇敢地去嘗試各種可能性，不管有沒有幫助，走過必留下痕跡。</p>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="stories-footer reveal">
-    <p class="stories-more-text">還有 23 個故事，在粉專等著你</p>
-    <a href="https://www.facebook.com/ScyllaConsultant" target="_blank" class="stories-more-link">前往女神光粉專閱讀完整故事 →</a>
+    <p class="stories-more-text">25 篇創業心裡話，A 到 Y，全都在這裡</p>
+    <a href="https://www.facebook.com/ScyllaConsultant" target="_blank" class="stories-more-link">前往女神光粉專 →</a>
   </div>
 </section>
 
