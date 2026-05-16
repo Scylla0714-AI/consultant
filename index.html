@@ -147,10 +147,12 @@
   .hero-stat-grid {
     display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
     background: var(--rule); border: 1px solid var(--rule);
+    min-width: 0;
   }
   .stat-cell {
-    background: var(--paper); padding: 2.4rem;
+    background: var(--paper); padding: 2rem 1.4rem;
     transition: background .2s;
+    min-width: 0;
   }
   .stat-cell:hover { background: var(--paper-warm); }
   .stat-num {
@@ -270,7 +272,7 @@
   .case-desc { font-size: .85rem; color: var(--ink-light); line-height: 1.75; margin-bottom: 1.6rem; }
   .case-card.featured .case-desc { color: rgba(242,240,235,.55); }
   .case-result { display: flex; align-items: baseline; gap: .4rem; }
-  .case-result-num { font-family: var(--heading); font-size: 2rem; font-weight: 800; letter-spacing: -.03em; color: var(--gold); }
+  .case-result-num { font-family: var(--heading); font-size: 1.8rem; font-weight: 800; letter-spacing: -.03em; color: var(--gold); white-space: nowrap; }
   .case-result-text { font-size: .72rem; font-weight: 300; letter-spacing: .08em; color: var(--ink-faint); }
   .case-card.featured .case-result-text { color: rgba(242,240,235,.4); }
 
@@ -392,8 +394,16 @@
     #navbar { padding: 1.2rem 1.6rem; }
     .nav-links { display: none; }
     .hamburger { display: flex; }
-    section, #about, #contact { padding: 4.5rem 1.6rem; grid-template-columns: 1fr; gap: 3rem; }
-    #hero { padding: 7rem 1.6rem 4rem; grid-template-columns: 1fr; gap: 3rem; min-height: auto; }
+    section, #about { padding: 4.5rem 1.6rem; grid-template-columns: 1fr; gap: 3rem; }
+    #hero {
+      padding: 7rem 1.6rem 4rem;
+      grid-template-columns: 1fr;
+      gap: 3rem; min-height: auto;
+    }
+    .hero-right { width: 100%; }
+    .hero-stat-grid { grid-template-columns: 1fr 1fr; }
+    .stat-num { font-size: 2.2rem; }
+    .stat-cell { padding: 1.4rem 1rem; }
     .hero-stats { gap: 2.4rem; flex-wrap: wrap; }
     .services-grid, .testimonials-grid, .pricing-grid, .cases-grid, .stories-grid { grid-template-columns: 1fr; }
     .cases-grid .case-card.featured { grid-row: span 1; }
@@ -401,15 +411,27 @@
     footer { flex-direction: column; gap: 1.2rem; text-align: center; padding: 2.4rem 1.6rem; }
     hr.rule { margin: 0 1.6rem; }
     .about-photo { max-width: 100%; }
+    .pricing-grid { grid-template-columns: 1fr; }
   }
   @media (max-width: 600px) {
-    .hero-brand { font-size: clamp(3.5rem, 16vw, 5rem); letter-spacing: .12em; }
-    .hero-stats { gap: 1.8rem; }
+    .hero-h1 { font-size: clamp(2.4rem, 9vw, 3.2rem); }
+    .stat-num { font-size: 2rem; }
+    .stat-cell { padding: 1.2rem .8rem; }
+    .stat-label { font-size: .6rem; }
     section { padding: 3.5rem 1.2rem; }
     #hero { padding: 6rem 1.2rem 3rem; }
-    #about, #contact { padding: 3.5rem 1.2rem; }
+    #about { padding: 3.5rem 1.2rem; }
     hr.rule { margin: 0 1.2rem; }
-    .footer-links { flex-wrap: wrap; justify-content: center; gap: 1.2rem; }
+    .footer-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+    .case-result-num { font-size: 1.6rem; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .stories-grid { grid-template-columns: 1fr; }
+    .service-card, .case-card, .pricing-card { padding: 2rem 1.4rem; }
+  }
+  @media (max-width: 380px) {
+    .stat-num { font-size: 1.8rem; }
+    .hero-h1 { font-size: 2rem; }
+    .section-title { font-size: 1.8rem; }
   }
 </style>
 </head>
@@ -613,7 +635,7 @@
       <p class="case-desc">一家百人科技公司的主管們開會永遠在平行線上。工作坊之後，大家第一次真的明白彼此為什麼「這樣反應」，不是態度問題，是看事情的方式本來就不同。摩擦少了，決策快了。</p>
       <div class="case-result">
         <span class="case-result-num">100+</span>
-        <span class="case-result-text">人次參與，團隊協作明顯改善</span>
+        <span class="case-result-text">人次，協作明顯改善</span>
       </div>
     </div>
     <div class="case-card">
@@ -1139,7 +1161,7 @@
 <!-- FOOTER -->
 <footer>
   <a class="footer-logo" href="#">SC<span>Y</span>LLA</a>
-  <span class="footer-copy">© 2020 女神光顧問 · Scylla Tsai. All rights reserved.</span>
+  <span class="footer-copy">© 2020 女神光顧問 · Scylla Tsai · All rights reserved.</span>
   <nav class="footer-links">
     <a href="mailto:scylla0714@gmail.com">Email</a>
     <a href="https://www.facebook.com/ScyllaConsultant" target="_blank">Facebook</a>
